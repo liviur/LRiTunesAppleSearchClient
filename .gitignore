@@ -1,0 +1,56 @@
+#Rename this file to ".gitignore"
+*.DS_Store
+*.swp
+*~.nib
+
+build/
+applicaster.a
+
+*.pbxuser
+*.perspective
+*.perspectivev3
+*.xcbkptlist
+
+*.mode1v3
+*.mode2v3
+
+# Mac OS X Finder and whatnot
+.DS_Store
+
+# XCode (and ancestors) per-user config (very noisy, and not relevant)
+*.mode1
+*.mode1v3
+*.mode2v3
+*.perspective
+*.perspectivev3
+*.pbxuser
+*.xcuserdatad
+VersionX-revision.h
+xcuserdata
+
+# build products
+build/
+#Removed - *.[oa] this contains .a and .o
+
+# Other source repository archive directories (protects when importing)
+.hg
+.svn
+CVS
+
+
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
+
+# documentation
+
+doc/docset-installed.txt
+*xcuserdata*
+
+#CocoaPods
+Pods
