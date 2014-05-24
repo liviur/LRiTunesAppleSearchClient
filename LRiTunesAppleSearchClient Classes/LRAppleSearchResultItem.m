@@ -143,4 +143,9 @@ NSString * const kLRAppleSearchResultTrackTimeMillisKey = @"trackTimeMillis";
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"LRAppleSearchResultItem: %@", self.modelDictionary];
+}
+
 @end
