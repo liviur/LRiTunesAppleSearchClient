@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5023" systemVersion="13A603" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LRViewController" sceneMemberID="viewController">
@@ -15,8 +15,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42s-aC-AWZ">
+                                <rect key="frame" x="20" y="58" width="728" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wuh-Bt-Xaa"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rgs-9d-3af">
+                                <rect key="frame" x="366" y="200" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Result Text" translatesAutoresizingMaskIntoConstraints="NO" id="K92-AI-kOv">
+                                <rect key="frame" x="20" y="96" width="728" height="908"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Term to search iTunes..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXG-g5-FNy">
+                                <rect key="frame" x="20" y="20" width="728" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K92-AI-kOv" firstAttribute="leading" secondItem="42s-aC-AWZ" secondAttribute="leading" id="6fU-5d-QxA"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="centerX" secondItem="K92-AI-kOv" secondAttribute="centerX" id="7Tn-K3-FgA"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="8Be-Py-ucS"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="top" secondItem="JXG-g5-FNy" secondAttribute="bottom" constant="8" id="A5w-rU-wT2"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="centerX" secondItem="rgs-9d-3af" secondAttribute="centerX" id="Fdt-7z-nen"/>
+                            <constraint firstAttribute="trailing" secondItem="42s-aC-AWZ" secondAttribute="trailing" constant="20" symbolic="YES" id="O4a-rE-A7r"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="leading" secondItem="JXG-g5-FNy" secondAttribute="leading" id="PrL-M3-U0u"/>
+                            <constraint firstItem="K92-AI-kOv" firstAttribute="top" secondItem="42s-aC-AWZ" secondAttribute="bottom" constant="8" id="R6Y-XF-B3w"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="top" secondItem="JXG-g5-FNy" secondAttribute="bottom" constant="8" id="Rjt-CT-uzp"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="58" id="Zqu-VW-RKI"/>
+                            <constraint firstAttribute="bottom" secondItem="K92-AI-kOv" secondAttribute="bottom" constant="20" symbolic="YES" id="cGt-Ie-mqp"/>
+                            <constraint firstItem="42s-aC-AWZ" firstAttribute="trailing" secondItem="JXG-g5-FNy" secondAttribute="trailing" id="rUB-LY-gls"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="rgs-9d-3af" id="lgB-6X-e5A"/>
+                        <outlet property="resultsTextView" destination="K92-AI-kOv" id="MTX-OL-Yaa"/>
+                        <outlet property="searchButton" destination="42s-aC-AWZ" id="EAe-3T-fDl"/>
+                        <outlet property="searchTextField" destination="JXG-g5-FNy" id="voB-59-vZ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
