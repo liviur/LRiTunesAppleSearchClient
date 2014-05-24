@@ -10,5 +10,10 @@
 
 @interface LRiTunesAppleSearchClient : NSObject
 
+/**
+ Basic search function by term
+ @param term - String describing the term to search
+ @param completion - Completion block , in case of success - an NSArray will be returned with LRAppleSearchResultItem objects. In case of failure -  a nil object will be returned
+ */
 - (void)searchWithTerm:(NSString *)term withCompletionHandler:(void (^)(NSArray *results))completion;
 @end
