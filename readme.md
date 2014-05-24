@@ -11,6 +11,19 @@ https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web
 The networking heavy loading is done using AFNetworking 2.0.
 All the rest will be done without use of any external libraries.
 
+## Integration:
+Currently integration conculdes of the following:
+1. Add AFNetworking to the project (Preferably by using CocoaPods) - Version 2.0 or above.
+2. Add files from the LRiTunesAppleSearchClientClasses to the project.
+
+A sample object is attached.
+Make sure to run `pos install` in order to get AFNetworking and the demo project up and running.
+
+## Structure
+Currently consists of:
+* LRiTunesAppleSearchClient - Main search client class.
+* LRAppleSearchResultItem - Search item object.
+
 ## Future Goals:
 1. Finish the project
 2. Have a nice sample app based on a simple search form and table view.
